@@ -1,4 +1,5 @@
 // prodev-mobile-app-0x00/app/index.tsx
+<Text style={styles.text}>First App Created</Text>
 import React from "react";
 import { View, Text, StyleSheet } from "react-native";
 

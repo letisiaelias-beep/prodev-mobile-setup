@@ -1,4 +1,14 @@
 # Welcome to your Expo app 👋
+# write README
+@"
+# prodev-mobile-app-0x00 — Task 1: Create Your First Mobile App
+
+## Scaffolding Steps
+- Parent folder: `prodev-mobile-setup`
+- Project folder: `prodev-mobile-app-0x00`
+- Command run:
+  ```bash
+  npx create-expo-app@latest .
 
 This is an [Expo](https://expo.dev) project created with [`create-expo-app`](https://www.npmjs.com/package/create-expo-app).
 
