@@ -1,4 +1,3 @@
-// app/index.tsx
 import React from "react";
 import {
   Text,
@@ -11,27 +10,18 @@ import {
 } from "react-native";
 import { SafeAreaView, SafeAreaProvider } from "react-native-safe-area-context";
 
-/*
-  NOTE on asset imports:
-  - If your project uses the alias "@/assets", keep the require paths as "@/assets/..."
-  - If you get module not found errors, change require() to a relative path, for example:
-      require("../assets/images/background-image.png")
-      require("../assets/images/Logo.png")
-  Choose whichever works in your project environment.
-*/
-
 export default function Index() {
   return (
     <SafeAreaProvider>
       <SafeAreaView style={{ flex: 1 }}>
         <ImageBackground
-          source={require("../assets/images/background-image.png")}
+          source={require("@/assets/images/background-image.png")}
           style={styles.background}
           resizeMode="cover"
         >
           <View style={styles.container}>
             <View style={styles.companyLogo}>
-              <Image source={require("../assets/images/Logo.png")} />
+              <Image source={require("@/assets/images/Logo.png")} />
             </View>
 
             <View style={styles.textGroup}>
@@ -43,15 +33,14 @@ export default function Index() {
             <View style={{ position: "absolute", bottom: 0, width: "100%" }}>
               <View style={styles.buttonGroup}>
                 <TouchableOpacity style={styles.button}>
-                  <Text style={{ ...styles.textSmall, color: "black" }}>
-                    Join here
-                  </Text>
+                  <Text style={{ ...styles.textSmall, color: "black" }}>Join here</Text>
                 </TouchableOpacity>
 
                 <TouchableOpacity style={styles.transparentButton}>
                   <Text style={styles.textSmall}>Sign In</Text>
                 </TouchableOpacity>
               </View>
+
               <View style={{ alignItems: "center", paddingVertical: 20 }}>
                 <Text style={{ color: "white" }}>Continue to home</Text>
               </View>
@@ -84,16 +73,16 @@ const styles = StyleSheet.create({
   },
   textLarge: {
     color: "white",
-    fontWeight: "800" as any,
+    fontWeight: "800",
     fontSize: 40,
-    textAlign: "center" as any,
+    textAlign: "center",
     marginBottom: 12,
   },
   textSmall: {
     color: "white",
     fontSize: 18,
-    fontWeight: "200" as any,
-    textAlign: "center" as any,
+    fontWeight: "200",
+    textAlign: "center",
   },
   transparentButton: {
     borderColor: "white",
@@ -104,7 +93,6 @@ const styles = StyleSheet.create({
     alignItems: "center",
     fontSize: 20,
     flex: 1,
-    marginLeft: 12,
   },
   button: {
     borderColor: "white",
@@ -116,7 +104,6 @@ const styles = StyleSheet.create({
     fontSize: 20,
     backgroundColor: "white",
     flex: 1,
-    marginRight: 12,
   },
   buttonGroup: {
     flexDirection: "row",
